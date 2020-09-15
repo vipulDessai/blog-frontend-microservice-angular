@@ -3,3 +3,4 @@
 ## TODO
 - [ ] Login form
 - [ ] Automated Unit Tests
+- [ ] Create HTML Form with all [attributes](https://www.w3schools.com/html/html_form_attributes.asp]) in it
