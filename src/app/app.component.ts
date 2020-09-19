@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TestService } from './test.service';
 
+import { DummyData } from "./DummyData";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,9 +13,9 @@ export class AppComponent implements OnInit{
   heroes:any;
   ngOnInit(): void {
     // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    this.testService.getHeroes().subscribe(
-      heroString => {
-        this.heroes = heroString["foo"];
+    this.testService.getHeroes("api/users").subscribe(
+      (heroString: DummyData) => {
+        this.heroes = heroString.foo;
       }
     );
   }
