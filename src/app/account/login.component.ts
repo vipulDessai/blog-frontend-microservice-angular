@@ -55,7 +55,8 @@ export class LoginComponent implements OnInit {
           this.router.navigate([this.returnUrl]);
         },
         error => {
-          this.alertService.error(error);
+          const errMessage = error.message ? error.message : "Error occurred, please try again!!";
+          this.alertService.error(errMessage);
           this.loading = false;
         }
       )
