@@ -8,13 +8,21 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AlertComponent } from './alert/alert.component';
 import { HomeComponent } from './home/home.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { RegisterComponent } from './register/register.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
+import { BlogListComponent } from './blog-list/blog-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AlertComponent,
-    HomeComponent
+    HomeComponent,
+    NavBarComponent,
+    RegisterComponent,
+    BlogPostComponent,
+    BlogListComponent
   ],
   imports: [
     BrowserModule,
