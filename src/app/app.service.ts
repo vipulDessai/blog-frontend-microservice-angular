@@ -40,4 +40,8 @@ export class AppService {
     this.userSubject.next(null);
     this.router.navigate(['/account/login']);
   }
+
+  public get userValue(): User {
+    return this.userSubject.value;
+  }
 }
