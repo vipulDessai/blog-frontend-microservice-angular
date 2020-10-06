@@ -1,1 +1,18 @@
-<button (click)="logout($event)">Logout</button>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Navbar</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" (click)="logout($event)">Logout</a>
+                    <a class="dropdown-item" routerLink="../home">Home</a>
+                    <a class="dropdown-item" routerLink="../blogs">My Blogs</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
