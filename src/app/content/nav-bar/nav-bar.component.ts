@@ -7,13 +7,14 @@ import { AppService } from '@app/app.service';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-
+  collapsed = true;
   constructor(private appService: AppService) { }
 
   ngOnInit(): void {
   }
 
-  logout(event) {
+  logout(event: Event) {
+    event.preventDefault();
     this.appService.logout();
   }
 }

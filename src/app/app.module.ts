@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule,
+    NgbModule,  // bootstrap
   ],
   providers: [],
   bootstrap: [AppComponent],

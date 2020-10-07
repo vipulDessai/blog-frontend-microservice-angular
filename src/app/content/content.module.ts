@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '@app/shared.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { ContentRoutingModule } from './content-routing.module';
@@ -15,6 +16,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
         ReactiveFormsModule,
         ContentRoutingModule,
         SharedModule,
+        NgbModule,  // bootstrap
     ],
     declarations: [
         ContentComponent,
