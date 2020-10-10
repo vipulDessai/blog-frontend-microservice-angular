@@ -8,9 +8,10 @@
                 {{user.userName}}
             </a>
             <div ngbDropdownMenu class="dropdown-menu">
-                <a ngbDropdownItem class="dropdown-item" (click)="logout($event)">Logout</a>
+                <a ngbDropdownItem class="dropdown-item" routerLink="/content/create">Create Blog</a>
                 <a ngbDropdownItem class="dropdown-item" routerLink="/content/home">Home</a>
                 <a ngbDropdownItem class="dropdown-item" routerLink="/content/blogs">My Blogs</a>
+                <a ngbDropdownItem class="dropdown-item" (click)="logout($event)">Logout</a>
             </div>
         </div>
     </div>

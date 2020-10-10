@@ -9,6 +9,7 @@ import { ContentRoutingModule } from './content-routing.module';
 import { ContentComponent } from './content.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { BlogCreateComponent } from './blog-create/blog-create.component';
 
 @NgModule({
     imports: [
@@ -16,7 +17,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
         ReactiveFormsModule,
         ContentRoutingModule,
         SharedModule,
-        NgbModule,  // bootstrap
+        NgbModule,  // ng-bootstrap
     ],
     declarations: [
         ContentComponent,
@@ -24,6 +25,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
         NavBarComponent,
         BlogListComponent,
         BlogPostComponent,
+        BlogCreateComponent,
     ]
 })
 export class ContentModule {}
