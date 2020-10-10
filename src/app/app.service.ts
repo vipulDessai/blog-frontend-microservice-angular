@@ -23,7 +23,7 @@ export class AppService {
   }
 
   login(userName: string, password: string) {
-    return this.http.post<User>(`${environment.apiPrefix}/users/authenticate`, { userName, password })
+    return this.http.post<User>(`${environment.accountPrefix}/authenticate`, { userName, password })
       .pipe(
         map(
           user => {
@@ -38,7 +38,7 @@ export class AppService {
   logout() {
     localStorage.removeItem('user');
     this.userSubject.next(null);
-    this.router.navigate(['/account/login']);
+    this.router.navigate([`/${environment.accountPrefix}/login`]);
   }
 
   public get userValue(): User {
