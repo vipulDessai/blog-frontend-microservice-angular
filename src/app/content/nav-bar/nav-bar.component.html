@@ -1,17 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a routerLink="../home" class="navbar-brand">Navbar</a>
-    <div class="navbar-collapse" [class.collapse]="collapsed">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown" ngbDropdown>
-                <a class="nav-link" tabindex="0" ngbDropdownToggle role="button">
-                    Profile
-                </a>
-                <div ngbDropdownMenu class="dropdown-menu">
-                    <a ngbDropdownItem class="dropdown-item" (click)="logout($event)">Logout</a>
-                    <a ngbDropdownItem class="dropdown-item" routerLink="/content/home">Home</a>
-                    <a ngbDropdownItem class="dropdown-item" routerLink="/content/blogs">My Blogs</a>
-                </div>
-            </li>
-        </ul>
+<nav class="row bg-light">
+    <div class="col nav-link">
+        <a routerLink="/content/home">Simple Blog App</a>
+    </div>
+    <div class="col nav-link text-right">
+        <div ngbDropdown>
+            <a ngbDropdownToggle>
+                {{user.userName}}
+            </a>
+            <div ngbDropdownMenu class="dropdown-menu">
+                <a ngbDropdownItem class="dropdown-item" (click)="logout($event)">Logout</a>
+                <a ngbDropdownItem class="dropdown-item" routerLink="/content/home">Home</a>
+                <a ngbDropdownItem class="dropdown-item" routerLink="/content/blogs">My Blogs</a>
+            </div>
+        </div>
     </div>
 </nav>
