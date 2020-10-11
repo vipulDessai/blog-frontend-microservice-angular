@@ -5,6 +5,15 @@ import { AppService } from '@app/app.service';
 
 import { NavBarComponent } from './nav-bar.component';
 
+const appServiceStub: Partial<AppService> = {
+  userValue: {
+    userName: "foo_bar",
+    firstName: "Foo",
+    lastName: "bar",
+    lastLogin: new Date(),
+  }
+}
+
 describe('NavBarComponent', () => {
   let component: NavBarComponent;
   let fixture: ComponentFixture<NavBarComponent>;
@@ -13,7 +22,7 @@ describe('NavBarComponent', () => {
     await TestBed.configureTestingModule({
       imports: [HttpClientModule, RouterTestingModule],
       declarations: [ NavBarComponent ],
-      providers: [HttpClient, AppService],
+      providers: [HttpClient, { provide: AppService, useValue: appServiceStub }],
     })
     .compileComponents();
   });
