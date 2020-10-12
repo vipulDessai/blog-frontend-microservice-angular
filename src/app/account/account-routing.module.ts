@@ -14,6 +14,9 @@ const routes: Routes = [
     }
 ];
 
+// for testing
+export default routes;
+
 @NgModule({
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
