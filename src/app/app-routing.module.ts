@@ -13,6 +13,9 @@ const routes: Routes = [
   { path: '**', redirectTo: 'content/home' }
 ];
 
+// for testing
+export default routes;
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
