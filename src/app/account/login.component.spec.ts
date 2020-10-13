@@ -6,7 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Location } from "@angular/common";
 
 import { LoginComponent } from './login.component';
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 
 @Component({
   template: `fake Home`
@@ -34,10 +34,12 @@ const ActivatedRouteStub = new ActivatedRouteStubClass();
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
-  let fixture;// ComponentFixture<LoginComponent>;
+  let fixture: ComponentFixture<LoginComponent>;
   let router: Router;
 
   let location: Location;
+
+  let zone: NgZone;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -52,28 +54,27 @@ describe('LoginComponent', () => {
 
     router = TestBed.inject(Router);
     location = TestBed.inject(Location);
+    zone = TestBed.inject(NgZone);
 
-    fixture = TestBed.createComponent(AppComponent);
-    router.initialNavigation();
+    TestBed.createComponent(AppComponent);
+
+    // navigation is to be run inside the angular ng zone
+    zone.run(() => {
+      router.initialNavigation();
+    });
   });
 
-  // beforeEach(() => {
-  //   fixture = TestBed.createComponent(LoginComponent);
-  //   component = fixture.componentInstance;
-  //   fixture.detectChanges();
-  // });
-
   it('should create', () => {
+    fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
 
-  it('should call submit', fakeAsync(() => {
-    router.navigate(['/content/home']);
-    
-    // We wait for all pending promises to be resolved.
-    tick();
-
-    expect(location.path()).toBe('/content/home');
-  }));
+  it('should navigate to /content/home', () => {
+    // navigation is to be run inside the angular ng zone
+    zone.run(() => {
+      router.navigate(['/content/home']);
+      expect(location.path()).toBe('/content/home');
+    });
+  });
 });
