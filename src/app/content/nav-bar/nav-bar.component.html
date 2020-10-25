@@ -1,6 +1,6 @@
 <nav class="row bg-light">
     <div class="col nav-link">
-        <a routerLink="/content/home">Simple Blog App</a>
+        <a routerLink="/content/home">Tellefy</a>
     </div>
     <div class="col nav-link text-right">
         <div ngbDropdown>
@@ -8,9 +8,9 @@
                 {{user.userName}}
             </a>
             <div ngbDropdownMenu class="dropdown-menu">
-                <a ngbDropdownItem class="dropdown-item" routerLink="/content/create">Create Blog</a>
+                <a ngbDropdownItem class="dropdown-item" routerLink="/content/create">Create Records</a>
                 <a ngbDropdownItem class="dropdown-item" routerLink="/content/home">Home</a>
-                <a ngbDropdownItem class="dropdown-item" routerLink="/content/blogs">My Blogs</a>
+                <a ngbDropdownItem class="dropdown-item" routerLink="/content/list">View Records</a>
                 <a ngbDropdownItem class="dropdown-item" (click)="logout($event)">Logout</a>
             </div>
         </div>
