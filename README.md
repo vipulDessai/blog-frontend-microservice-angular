@@ -1,4 +1,4 @@
-# Blog - Front End - Angular
+# Tellefy - Front End - Angular
 
 ## TODO
 - [ ] Login form

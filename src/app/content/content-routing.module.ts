@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlogCreateComponent } from './blog-create/blog-create.component';
-import { BlogListComponent } from './blog-list/blog-list.component';
 import { ContentComponent } from './content.component';
+import { CreateLogComponent } from './create-log/create-log.component';
 import { HomeComponent } from './home/home.component';
+import { ListLogsComponent } from './list-logs/list-logs.component';
 
 const routes: Routes = [
     {
         path: '', component: ContentComponent,
         children: [
             { path: 'home', component: HomeComponent},
-            { path: 'blogs', component: BlogListComponent},
-            { path: 'create', component: BlogCreateComponent},
+            { path: 'list', component: ListLogsComponent},
+            { path: 'create', component: CreateLogComponent},
         ]
     }
 ];

@@ -3,13 +3,13 @@ import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '@app/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BlogListComponent } from './blog-list/blog-list.component';
-import { BlogPostComponent } from './blog-post/blog-post.component';
 import { ContentRoutingModule } from './content-routing.module';
 import { ContentComponent } from './content.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { BlogCreateComponent } from './blog-create/blog-create.component';
+import { CreateLogComponent } from './create-log/create-log.component';
+import { ListLogsComponent } from './list-logs/list-logs.component';
+import { ViewLogComponent } from './view-log/view-log.component';
 
 @NgModule({
     imports: [
@@ -23,9 +23,9 @@ import { BlogCreateComponent } from './blog-create/blog-create.component';
         ContentComponent,
         HomeComponent,
         NavBarComponent,
-        BlogListComponent,
-        BlogPostComponent,
-        BlogCreateComponent,
+        CreateLogComponent,
+        ViewLogComponent,
+        ListLogsComponent,
     ]
 })
 export class ContentModule {}
