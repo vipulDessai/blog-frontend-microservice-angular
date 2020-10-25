@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "blog-frontend-angular": {
+    "tellefy-frontend-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/blog-frontend-angular",
+            "outputPath": "dist/tellefy-frontend-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "blog-frontend-angular:build"
+            "browserTarget": "tellefy-frontend-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "blog-frontend-angular:build:production"
+              "browserTarget": "tellefy-frontend-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "blog-frontend-angular:build"
+            "browserTarget": "tellefy-frontend-angular:build"
           }
         },
         "test": {
@@ -114,18 +114,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "blog-frontend-angular:serve"
+            "devServerTarget": "tellefy-frontend-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "blog-frontend-angular:serve:production"
+              "devServerTarget": "tellefy-frontend-angular:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "blog-frontend-angular",
+  "defaultProject": "tellefy-frontend-angular",
   "cli": {
     "analytics": "42b9fd6a-693e-4378-970b-769a902f71b2"
   }
