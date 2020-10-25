@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   constructor() {}
-  heroes:any;
   ngOnInit(): void {
     // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
   }
