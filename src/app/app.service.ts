@@ -7,6 +7,8 @@ import { map } from 'rxjs/operators';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
+export const url = `${environment.backendMetadata.ssl ? "https" : "http"}://${environment.backendMetadata.url}`;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -23,7 +25,7 @@ export class AppService {
   }
 
   login(userName: string, password: string) {
-    return this.http.post<User>(`${environment.accountPrefix}/authenticate`, { userName, password })
+    return this.http.post<User>(`${url}/${environment.accountPrefix}/authenticate`, { userName, password })
       .pipe(
         map(
           user => {

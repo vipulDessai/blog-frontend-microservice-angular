@@ -8,6 +8,8 @@ import { User } from '@app/_models';
 import { AppService } from './app.service';
 import { RouterTestingModule } from '@angular/router/testing';
 
+import { url } from './app.service';
+
 describe('appService', () => {
     let httpClient: HttpClient;
     let httpTestingController: HttpTestingController;
@@ -45,7 +47,7 @@ describe('appService', () => {
         };
 
         // expect one catches only one xhr request, else would throw error
-        const req = httpTestingController.expectOne(`${environment.accountPrefix}/authenticate`);
+        const req = httpTestingController.expectOne(`${url}/${environment.accountPrefix}/authenticate`);
         expect(req.request.method).toEqual('POST');
 
         // once the request is caught

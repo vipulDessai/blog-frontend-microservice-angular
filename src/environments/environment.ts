@@ -5,6 +5,10 @@
 export const environment = {
   production: false,
   accountPrefix: 'account',
+  backendMetadata: {
+    url: "localhost:3000",
+    ssl: false,
+  },
 };
 
 /*
