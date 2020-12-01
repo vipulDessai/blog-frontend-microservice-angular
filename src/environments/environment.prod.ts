@@ -1,4 +1,8 @@
 export const environment = {
   production: true,
-  apiPrefix: 'api',
+  accountPrefix: 'account',
+  backendMetadata: {
+    url: "stage-backend-nodejs.herokuapp.com",
+    ssl: true,
+  },
 };
