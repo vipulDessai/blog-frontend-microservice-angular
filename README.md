@@ -1,4 +1,4 @@
-# Tellefy - Front End - Angular [![Build Status](https://travis-ci.com/vipulDessai/tellefy-frontend-microservice-angular.svg?branch=working)](https://travis-ci.com/vipulDessai/tellefy-frontend-microservice-angular)
+# Tellefy - Front End - Angular ![Check Build](https://github.com/vipulDessai/tellefy-frontend-microservice-angular/workflows/Check%20Build/badge.svg)
 
 ## TODO
 - [ ] Login form
